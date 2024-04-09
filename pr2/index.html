@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lamborghini car animation</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .sky {
+        width: 100vw;
+        height: 100vh;
+        background: url(sky.jpeg) no-repeat center/cover;
+        position: absolute;
+      }
+      .tree {
+        height: 100vh;
+        background: url(tree-removebg-preview.png) no-repeat center/cover;
+      }
+      .track {
+        background: url(track.jpeg) repeat-x;
+        position: absolute;
+        bottom: 0;
+        width: 1000vw;
+        height: 20vh;
+        animation: track 6s linear infinite;
+      }
+      .car {
+        background: url(car-removebg-preview.png) no-repeat center/cover;
+        width: 17rem;
+        height: 4.699rem;
+        position: absolute;
+        bottom: 77px;
+        left: 396px;
+      }
+      .wheel {
+        position: absolute;
+        animation: wheel 0.6s linear infinite;
+      }
+      .wheel1 {
+        background: url(wheel1-removebg-preview.png) no-repeat center/contain;
+        width: 46px;
+        height: 49px;
+        bottom: 71px;
+        left: 570px;
+      }
+      .wheel2 {
+        background: url(wheel2-removebg-preview.png) no-repeat center/cover;
+        width: 43px;
+        height: 44px;
+        bottom: 77px;
+        left: 433px;
+      }
+      @keyframes wheel {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes track {
+        100% {
+          transform: translate(-500vw);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sky">
+      <div class="tree"></div>
+      <div class="track"></div>
+      <div class="car"></div>
+      <div class="wheel wheel1"></div>
+      <div class="wheel wheel2"></div>
+    </div>
+  </body>
+</html>
